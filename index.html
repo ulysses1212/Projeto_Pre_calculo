@@ -1,0 +1,185 @@
+	%\documentclass[a4paper]{article}
+	%\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry} % Este pacote altera a margem do documento
+  
+	\documentclass[a4paper,12pt]{book}
+	%\usepackage[inner=2cm,outer=2cm,bindingoffset=2cm]{geometry}
+    \usepackage[inner=2.5cm,outer=2cm,top=2cm,bottom=2cm,
+    bindingoffset=5mm]{geometry}
+	\usepackage[utf8]{inputenc} % Este pacote serve para acentuação
+	\usepackage[brazil]{babel} % Este pacote coloca os nomes em pt-br
+	\usepackage{indentfirst} % Este pacote aplica indentação
+	\usepackage[svgnames, usenames, dvipsnames]{xcolor} % Modifica as cores
+	\usepackage{amsmath}
+	\usepackage{color}
+	\usepackage{soul} % usei para realce em amarelo
+	\usepackage{amsfonts}
+	\usepackage{mathtools}
+	\usepackage{tasks}
+	\usepackage{multicol}
+	\usepackage{multirow}
+	\usepackage{graphicx} % Este pacote permite adicionar figuras
+	\usepackage{float} % Força o posicionamento da figura
+	%\usepackage{subcaption}   
+	\usepackage{indentfirst}
+	\usepackage{booktabs}
+	\usepackage{hyperref}
+\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black} %
+         
+	\usepackage{fancyhdr}% estrutura o cabeçalho, rodapé, capa
+	\usepackage{booktabs,multirow,bigstrut} % unir tabela gerada no excel
+	\usepackage[T1]{fontenc}
+	\usepackage{colortbl}
+	\usepackage{booktabs}
+	\usepackage{scalefnt}
+    \usepackage{fontawesome5}%para fazer o simbolo do youtube
+    \usepackage{yhmath}
+	\usepackage{makecell}
+    \usepackage{caption}
+    \usepackage{bm}
+    \usepackage{setspace}
+    \usepackage{siunitx}
+    \usepackage{amssymb}
+    \usepackage{gensymb}
+    \usepackage{tabularx}
+    \usepackage{extarrows}
+    \usepackage{booktabs}
+    \usepackage{changepage} %function adjustwidth
+    \usepackage{courier}
+    \usepackage{scalefnt}
+    \usepackage{epstopdf}
+    \usepackage{gensymb}%para escrever 30° com \degree
+	\usepackage{array}
+	\usepackage{stackengine}[2013-09-11]% zero cortado
+	   \newcommand\slashzero{\stackinset{c}{}{c}{}{/}{0}}
+	\usepackage{icomma} %no space after commma
+	\usepackage[skip=10pt plus1pt, indent=30pt]{parskip}
+    \usepackage{lmodern}
+    \usepackage[svgnames]{xcolor}
+    \usepackage[most]{tcolorbox}%fundo dos exemplos coloridos
+    \usetikzlibrary{shadows}%fundo dos exemplos coloridos
+    \newcounter{exa}
+        \tcbset{
+        myexample/.style={
+        enhanced,
+        colback=white,
+        colframe=minha_cor,
+        fonttitle=\scshape,
+        title={\refstepcounter{exa}exemplo~\theexa},
+        title style={fill=minha_cor},
+        coltitle=black,
+        every box/.style={highlight math style={colback=minha_cor,colframe=minha_cor}}
+        }}
+        \newtcolorbox{texample}{myexample}
+        %cor anterior = LightBlue!50!white
+	   \definecolor{minha_cor}{HTML}{e5fcba}
+        %cor anterior = E5FAEC
+	\usepackage{tikz}     
+	   \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt  
+    \usepackage{pgfplots}
+    \pgfplotsset{width=7cm,compat=1.18}
+
+    \usetikzlibrary{intersections}
+	\usepackage{multicol}
+	   \setlength{\columnsep}{2cm}
+	\usepackage[Bjornstrup]{fncychap}
+	    \newcommand{\df}{\displaystyle\frac}
+	
+	   \newtcolorbox{mytextbox}[1][]{%
+	   	sharp corners,
+	   	enhanced,
+	   	colback=white,
+	   	height=10cm,
+	   	attach title to upper,
+	   	#1
+	}
+
+        % Código para funções trigonométricas
+
+        \DeclareMathOperator{\sen}{sen}
+        \DeclareMathOperator{\tg}{tg}
+        \DeclareMathOperator{\cotg}{cotg}
+        \DeclareMathOperator{\cossec}{cossec}
+        \DeclareMathOperator{\arcsen}{arcsen}
+        \DeclareMathOperator{\arctg}{arctg}
+
+        %----------------------------
+
+        
+        % Define cores para a ilustração de frações
+        
+        \definecolor{fraccolor}{rgb}{0.72, 0.83, 0.51}
+        
+        %----------------------------
+        
+        
+	
+	%%%%%%%%%%%%%%% início do documento %%%%%%%%%%%%%%%
+	\begin{document}
+		\newgeometry{left=2cm,bottom=2cm}% retira a margem intercalada de livro
+        
+        \thispagestyle{empty}
+		\input{capa.tex}
+		\newpage
+  
+		\restoregeometry  % volta a gerar margem intercalada como um livro	
+		\thispagestyle{empty} %para não aparecer o número na 1°pag em branco
+        
+        \pagenumbering{roman}
+        \cleardoublepage
+        \setcounter{page}{0}
+		\tableofcontents % índice
+		%\thispagestyle{empty} %para não aparecer o número zero no índice.
+		
+		%\setcounter{page}{0} %para começar a contagem das páginas
+        %----------------------------
+		\pagestyle{fancy} % define o cabeçalho e rodapé das páginas
+        %\thispagestyle{empty}
+		\fancyhead[R]{\includegraphics[width=0.08 \textwidth]{Figuras/usp_logo.jpg}}
+		\fancyhead[C]{}
+		\fancyhead[L]{\includegraphics[width=0.15\textwidth]{Figuras/esalq.png}}
+		\fancyfoot[L]{}
+		\fancyfoot[C]{\thepage}
+		\fancyfoot[R]{}
+		\renewcommand{\headrulewidth}{0.4pt}
+		\renewcommand{\footrulewidth}{0.4pt}  
+        %----------------------------
+        
+        
+        
+		%\chapter{Introdução}
+
+		%\input{0_Introdução.tex}
+		
+		\chapter{Operações básicas com frações}
+
+		\pagenumbering{arabic} % And moving back to arabic numbering (1,2,3,4) for the body.
+        \patchcmd{\chapter}
+        {\clearpage}
+        {\cleardoublepage}
+        {}
+        {}
+  
+		\input{1_Operacoes_basicas.tex} %%%% insere o módulo 1 %%%%%
+		
+		\chapter{Potenciação e Radiciação}
+		\input{2_Potenciacao_e_Radiciacao.tex}
+		
+		\chapter{Produtos Notáveis e Fatoração}
+		\input{3_Produtos_Notaveis_e_Fatoracao.tex}
+		
+		\chapter{Exponencial e Logaritmo}
+		\input{4_Exponencial_e_logaritmo.tex}
+		
+		\chapter{Equações e Inequações do 1º Grau}
+		\input{5_Eq_e_Ineq_primeiro_grau.tex}
+		
+		\chapter{Equações e Inequações do 2º Grau}
+		\input{6_Eq_e_Ineq_segundo_grau.tex}
+		
+		\chapter{Equações Modulares}
+		\input{7_Eq_modulares.tex}
+		
+		\chapter{Trigonometria}
+		\input{8_Trigonometria.tex}
+		
+	\end{document}
