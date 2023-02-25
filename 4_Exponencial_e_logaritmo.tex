@@ -1,0 +1,274 @@
+\section{Entendendo a exponencial}
+
+\noindent
+\textbf{Ilustração:} Alguns técnicos estão trabalhando numa pesquisa num laboratório de PISCICULTURA e estão verificando que os peixes do aquário estão morrendo. 
+\begin{itemize}
+    \item Na semana da pesquisa, apareceram 3 peixes mortos na  segunda-feira.
+    \item Na terça-feira morreram 9 peixes. 
+    \item Na quarta-feira morreram 27 outros.
+\end{itemize}
+
+A seguir, é apresentada uma maneira de trabalhar dom esse tipo de problema
+
+\noindent
+\textbf{Resolvendo equações exponenciais}
+	
+Uma equação é caracterizada por uma igualdade e pela presença de uma ou mais incógnitas. Por exemplo, $2x + 5 = 9 $ é uma equação do primeiro grau cuja solução é $x=2$, pois 2 é o único valor que $x$ pode assumir que torna a igualdade verdadeira. Na equação exponencial, a incógnita encontra-se no expoente.
+
+\begin{texample}
+    \centering
+    \tcbhighmath{2^x = 32}
+\end{texample}
+	
+Para resolver uma equação exponencial, a estratégia é tentar igualar as bases. Após isso, os expoentes podem ser igualados.
+
+Sabendo que $2^{5} = 32$, as bases do exemplo acima podem ser igualadas.
+
+\begin{texample}
+    \centering
+    \tcbhighmath{2^x = 2^5 \Longleftrightarrow x=5}
+\end{texample}
+
+\noindent
+\textbf{Exercício resolvido}\\
+Resolver os exemplos a seguir.
+\begin{itemize}
+    \item $2^{x} = 64$
+    \item $10^{3x} = 1000$
+    \item $3^{2x} = 27$
+    \item $8^{2x} = 128$
+\end{itemize}
+
+
+\section{Entendendo o logaritmo}
+
+Logaritmo é a operação inversa da exponencial utilizada para o cálculo de equações exponenciais que não possuem soluções imediatas. Neste sentido, o logaritmo simplifica os cálculos mais complicados. Além disso, o uso do logaritmo permite diminuir o grau de dificuldade das operações, transformando: multiplicação em adição, divisão em subtração, potenciação em multiplicação e radiciação em divisão.
+
+Para estudar logaritmo é necessário ter conhecimento sobre potenciação e as suas propriedades, pois para encontrar o valor numérico de um logaritmo é necessário desenvolver uma equação. Por exemplo, dada a equação exponencial $2^x = 4$, essa pode ser transformada em logaritmo.
+
+\begin{texample}
+    \centering
+    \tcbhighmath{2^x=4 \iff \log_{2}(4)=x}
+\end{texample}
+	
+A base 2 (cujo expoente é $x$) continua sendo base do logaritmo, o resultado 4 passa a ser o \textbf{logaritmando} e o $x$ é o resultado denominado \textbf{logaritmo}.
+	
+$\log_{2}(4) = x$ é o mesmo que perguntar a qual número 2 deve ser elevado para obtermos 4?
+	
+Sabe-se que 2 ao quadrado (ou seja, à potência 2) é igual a 4. Assim, conclui-se que o logaritmo de 4 na base 2 é igual a 2 (ou seja, $x = 2$).
+	
+Escrevendo em forma de logaritmo e calculando o resultado, obtém-se:
+\[
+3^x = 9 \implies \log_3(9) = x \implies x = 2
+\]
+	
+\(\log_{3}(9)= 2\) Lê-se: ``o logaritmo de 9 na base 3 é igual a 2''
+	
+\noindent
+\textbf{Definição de logaritmo}
+	
+Logaritmo é a operação inversa da exponencial e, com isso, a equivalência fundamental dos logaritmos pode ser enunciada:
+
+        \begin{tcolorbox}[colback=white,colframe=minha_cor,coltitle=black,title=Definição] 
+        \[
+        {\log_{a}(b) = x \implies a^x = b}
+        \]
+        \end{tcolorbox}
+        
+	Na definição anterior, tem-se as duas maneiras de mostrar a pergunta feita no início do estudo de logaritmos.
+	
+	A qual expoente $x$ deve-se elevar a base $a$ para resultar $b$?
+	
+	O cálculo de logaritmo depende de algumas condições especiais. A próxima seção contém as condições para um logaritmo existir.
+	
+	\textbf{Condições de existência do logaritmo}
+	\begin{itemize}
+		\item  O logaritmando deve ser um número positivo, isto é, $b > 0$;
+		\item  A base deve ser um número positivo diferente de 1, isto é, $ a >0 $ e $ a \neq 1$.
+	\end{itemize}
+	
+	A primeira restrição já inclui o fato de que o logaritmando deve ser diferente de zero. Na segunda restrição é definido que a base deve ser um número positivo, ou seja, também não pode ser zero.
+	
+	Alguns exemplos são apresentados a seguir:
+	   \begin{texample}
+         \centering
+         \tcbhighmath{\log_2(8) = x \implies 2^x = 8 \implies 2^x = 2^3 \implies x = 3}
+        \tcbhighmath{\log (100) = x \implies 10^x = 10^2 \implies x = 2}
+        \end{texample}
+        
+	Quando o logaritmo não apresenta base considera-se que a base tem valor igual a 10. Além disso, quando a base de um logaritmo é igual a $e$ ($e = 2,718 \dots $) ele é chamado de logaritmo Neperiano ou logaritmo Natural. 
+        \[
+        \ln(e)= \log_e(e)
+        \]
+        
+        Nesse caso, o logaritmo é mais usado em assuntos técnicos.
+
+    \noindent
+	\textbf{Propriedades operatórias}
+	
+	\begin{itemize}
+		\item Propriedade 1 (Logaritmo do produto)
+		\[
+        \log (A \times B) = \log A + \log B
+        \]
+		O logaritmo do produto é igual à soma dos logaritmos dos fatores. 
+
+        \begin{texample}
+        \centering
+        \tcbhighmath{ \log_2 (8 \times 4) = \log_2 8 + \log_2 4 = 3 + 2 = 5}
+        \end{texample}
+       
+		\item Propriedade 2 (Logaritmo do quociente)
+		\[
+        \log \left(\frac{A}{B}\right) = \log (A) - \log (B)
+        \]
+		
+		O logaritmo do quociente é igual à diferença entre o logaritmo do dividendo e o logaritmo do divisor.
+  
+	  \begin{texample}
+        \centering
+            \tcbhighmath{\log_2 \left(\frac{32}{4}\right) = \log_2 (32) - \log_2 (4) = 5 - 2 = 3}
+        \end{texample}
+        
+		\item Propriedade 3 (Logaritmo da potência)
+		\[
+        \log A^n = n \times \log A
+        \]
+		
+		O logaritmo da potência é igual ao produto do expoente pelo logaritmo da base da potência.
+
+        \begin{texample}
+        \centering
+        \tcbhighmath{\log 10^2 = 2 \times \log 10 = 2 \times 1 = 2}
+        \end{texample}
+        
+	\end{itemize}
+	Outro aspecto importante no estudo dos logaritmos é a transformação de base. Por exemplo, uma calculadora científica só calcula o logaritmo de base 10 ($\log$) ou o logaritmo neperiano ($\ln$). Então, por exemplo, quando deseja-se calcular o $\log_3(9)$ nessas calculadoras é necessário transformar a base 3 para a base 10 ou para a base $e$.
+
+    \noindent
+	\textbf{Mudança de base}
+	
+	Para mudar a base $\log_a(b)$ para base c, é necessário aplicar a seguinte igualdade:
+	\[\log_a(b) = \frac{\log_c(b)}{\log_c(a)}.\]
+
+        Aplicando a mudança de base em $\log_9(81)$, mudando da base 9 para a base 3, obtém-se:
+        
+        \begin{texample}
+        \centering
+        \tcbhighmath{\log_9(81) = \dfrac{\log_{3}(81)}{\log_{3}(9)} = \dfrac{4}{2} = 2}
+        \end{texample}
+	
+	\section{Exercícios}
+
+    \noindent
+	\textbf{Exponencial}
+	\begin{enumerate}
+		\item Determine o conjunto solução para as seguintes equações exponenciais:
+		\begin{tasks}
+			\task $2^{x-3} + 2^{x-1} + 2^{x} = 52 $ \\[-0.25cm]
+			\task $2^{x} + 2^{x+1} + 2^{x+2} + 2^{x+3} = \df{15}{2} $\\[-0.25cm]
+			\task $ 2 \cdot 2^x = \sqrt[6]{8}  \cdot \sqrt[4]{2} \cdot \sqrt[6]{2}$ \\[-0.25cm]
+			\task $\df{25^x+125}{6} = 5^{x+1}$ \\[-0.25cm]
+		\end{tasks}
+		
+		\item Calcule o conjunto solução do seguinte sistema de equações exponenciais:
+		
+		\[ \left\{  
+		\begin{array}{c}
+			4^x \cdot 8^y = \frac{1}{4}\\
+			9^x \cdot 27^{2y} = 3 \\
+		\end{array} 
+		\right.
+		\]
+		
+		\item Considere uma máquina agrícola que tenha uma depreciação de 25\% ao ano. Se seu valor de compra foi de R\$ 80.000,00, quanto custar´a daqui a quatro anos?
+		
+		\noindent
+		\hspace{-1.1cm}\textbf{Logaritmo}
+		
+		\item  Resolva as seguintes equações em t, utilizando $log$:
+		
+		\begin{tasks}(2)
+			\task $2^t=5$
+			\task $2,3=(1,1)^t$
+			\task $a=b^t$
+			\task $2,02(1,15)^t =3,18(2,01)^t$
+			\task $Pa^t=Qb^t$
+			\task $P=P_{0}b^t$
+			\task $P=P_{0}a^{nt}$
+			\task $Pb^{0,3k}=Pa^{nt}$
+		\end{tasks}
+		
+		\item Simplifique as expressões, utilizando as propriedades dos logaritmos:
+		
+		\begin{tasks}(2)
+			\task $\log(a^2) + \log(b) - \log(a) - \log(b^2)$
+			\task $\log(10^{x+3})$
+			\task $10^{\log(a^2)}$
+			\task  $10^{2 \log(b)}$
+			\task $10^{- \log(a)}t$
+			\task $10^{- \frac{\log(t)}{10}}$
+		\end{tasks}
+		
+		\item \textbf{Meia-vida} - Em geral, se uma substância tem uma meia-vida de humanidades de tempo (anos, horas, etc.), a quantidade $Q$ da substância depois de $t$ unidades de tempo ($a$ mesma de $h$), considerando $Q_0$ a quantidade inicial, é
+		\[
+		Q = Q_0\left(\frac{1}{2}\right)^{\dfrac{t}{h}}
+		\]
+		Em um método de marcação, utiliza-se como indicador o isótopo do potássio K42, cuja meia-vida é de $12,5 \;h$. Se houver $10,32 \;g$ inicialmente, em quantas horas essa substância atingirá $1 \;g$?
+		\item A partir do exercício 3 sobre Exponencial, qual o tempo em anos, em que o valor da máquina agrícola irá atingir a metade do valor da compra?
+	\end{enumerate}
+	
+	\section{Respostas dos exercícios}
+
+    \noindent
+	\textbf{Exponencial}
+	\begin{enumerate}
+		\item 
+		\begin{tasks}
+			\task A solução da equação é $x = \{ 5 \} $ \\[-0.25cm]
+			\task A solução da equação é $x = \{ -1 \} $ \\[-0.25cm]
+			\task A solução da equação é  $x =  \{\frac{1}{12}\} $  \\[-0.25cm]
+			\task A solução da equação é  $x =  \{ 1,2 \} $ 
+		\end{tasks}
+		
+		\item A solução da equação é o par $(x,y) =  \{ (-\frac{5}{2}, 1) \} $ 
+		
+		\item Após 4 anos, a máquina custará R\$ 25.312,50.
+		
+		\noindent
+		\hspace{-1.1cm}\textbf{Logaritmo}
+		
+		\item 
+	
+		\begin{tasks}(2)
+			\task $ t = 2,32 $ \\[-0.25cm]
+			\task $ t = 8,74 $ \\[-0.25cm]
+			\task $ t = \dfrac{\log (a)}{\log (b)}$ \\[-0.25cm]
+			\task $ t = -0,81 $ \\[-0.25cm]
+			\task $ t = \dfrac{\log \big( \frac{Q}{P} \big)}{\log \big(\frac{a}{b}\big)}$ \\[-0.25cm]
+			\task $ t = \dfrac{\log \big( \frac{P}{P_0} \big)}{\log (b) }$ \\[-0.25cm]
+			\task $ t = \dfrac{\log \big( \frac{P}{P_0} \big)}{n \log (a) }$ \\[-0.25cm]
+			\task $ t = \dfrac{0,3k\log (b)}{n\log (a)}$ \\[-0.25cm]
+		\end{tasks}
+		
+		\item 
+		
+		\begin{tasks}(2)
+			\task $\log \left(\dfrac{a}{b}\right)$
+			\task $ x+3 $
+			\task $ a^2 $
+			\task $ b^2 $
+			\task $\dfrac{t}{a}$
+			\task $ \dfrac{1}{\sqrt[10]{x}}$
+		\end{tasks}
+		
+		\item  A substância atingirá 1g após 42,09 horas.
+		
+		\item A máquina custará R\$ 40000,00, ou seja, metade do seu valor original de compra, após 2,41 anos.
+		
+	\end{enumerate}
+
+    \noindent
+	\textbf{Referências}
+
+    {\color{green!65!black} \;\Large \faIcon{book}} Link: \url{http://proedu.rnp.br/bitstream/handle/123456789/585/Aula_11.pdf?sequence=11&isAllowed=y}
